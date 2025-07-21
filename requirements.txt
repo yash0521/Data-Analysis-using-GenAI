@@ -1,0 +1,13 @@
+fastapi
+pandas
+numpy
+matplotlib
+seaborn
+uvicorn
+asammdf
+Pillow
+python-multipart
+requests
+pydantic
+pytest
+httpx
