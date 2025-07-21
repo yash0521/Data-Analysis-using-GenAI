@@ -21,26 +21,6 @@ This project replaces IAV Zio Insight functionality with a REST API powered by L
 | `Eng_uBatt` | Battery voltage | mV/V | "Create a histogram of battery voltage" |
 | `FuSHp_pRailBnk1` | Fuel rail pressure | MPa | "Display fuel pressure across vehicles" |
 
-## 🏗️ Project Structure
-
-```
-automotive-analysis-api/
-├── main.py                    # REST API implementation
-├── task_demo.py              # Task demonstration script
-├── run_server.py             # Server launcher
-├── requirements.txt          # Python dependencies
-├── README.md                 # This file
-├── data/                     # Data directory
-│   └── csv/                  # Vehicle CSV files (extracted from MDF)
-│       ├── Vehicle01_meas4.ChannelGroup_*.csv
-│       ├── Vehicle03_meas3.ChannelGroup_*.csv
-│       └── Vehicle05_meas3.ChannelGroup_*.csv
-└── generated_outputs/        # Analysis results
-    ├── task_battery_voltage.png
-    ├── task_fuel_pressure.png
-    └── task_engine_speed.png
-```
-
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
@@ -51,7 +31,7 @@ pip install -r requirements.txt
 
 ### 2. Verify Data Structure
 
-Ensure your CSV files are in the `data/csv/` directory:
+Run `analysis.ipynb` to get csv data from mdf files & Ensure your CSV files are in the `data/csv/` directory:
 ```
 data/csv/
 ├── Vehicle01_meas4.ChannelGroup_0.csv
@@ -233,25 +213,6 @@ print(f"Vehicles: {len(result['statistics'])}")
 | **Integration** | Desktop application | REST API for any system |
 | **Automation** | Manual workflow | Fully automated |
 
-## 📋 Technical Requirements
-
-### Dependencies
-```
-fastapi==0.104.1
-uvicorn==0.24.0
-pandas==2.1.3
-numpy==1.25.2
-matplotlib==3.8.2
-asammdf==7.4.2
-requests==2.31.0
-pydantic==2.5.0
-```
-
-### System Requirements
-- Python 3.8+
-- 4GB RAM (for processing large CSV files)
-- macOS/Linux/Windows support
-
 ## 🎉 Task Completion Verification
 
 Run the complete verification:
@@ -271,8 +232,6 @@ python task_demo.py
    ✅ Multi-vehicle histograms generated
    ✅ Statistics calculated for all vehicles
    ✅ Automotive signals correctly processed
-
-🚀 TASK COMPLETED - Ready for submission!
 ```
 
 ## 📚 Additional Resources
@@ -299,11 +258,3 @@ python run_server.py
 **matplotlib GUI errors:**
 - The code uses non-interactive backend (`Agg`)
 - All plots are saved as files, no GUI required
-
-## 👥 Contact
-
-For questions about this IAV Zio Insight replacement implementation, please refer to the task demonstration script and API documentation.
-
----
-
-**Task Status**: ✅ **COMPLETED** - REST API successfully replaces IAV Zio Insight functionality with AI-powered natural language processing capabilities.
